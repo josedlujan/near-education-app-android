@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">NEAR education App</string>
+    <string name="login_bienvenida">BIENVENIDO</string>
+    <string name="login_correo">Correo electronico</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_boton">Iniciar sesion</string>
+    <string name="login_recuperar">Recuperar cuenta</string>
+    <string name="login_registrar">REGISTRARSE</string>
+
+    <string name="registrar_texto">REGISTRO</string>
+    <string name="registrar_nombre">Nombre</string>
+    <string name="registrar_correo">Correo electronico</string>
+    <string name="registrar_password">Contrasena</string>
+    <string name="registrar_boton">Registrarse</string>
+
+    <string name="recuperar_text">RECUPERAR CUENTA</string>
+    <string name="recuperar_correo">Correo asociado</string>
+    <string name="recuperar_boton">Recuperar</string>
+
+
+    <string name="menu_navegacion_inicio">Inicio</string>
+    <string name="menu_navegacion_path">Path</string>
+    <string name="menu_navegacion_snippets">Snippets</string>
+    <string name="menu_navegacion_lecciones">Lecciones</string>
+    <string name="menu_navegacion_test">Test</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
