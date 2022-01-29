@@ -3,10 +3,20 @@ package com.near.educationapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LogInActivity : AppCompatActivity() {
+
+    private lateinit var EMAIL: TextInputEditText
+    private lateinit var PASS: TextInputEditText
+    private val bd = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
@@ -15,14 +25,18 @@ class LogInActivity : AppCompatActivity() {
         val recuperar = findViewById<TextView>(R.id.recuperar)
         val registrarse = findViewById<TextView>(R.id.registrar)
 
+        EMAIL = findViewById<TextInputEditText>(R.id.login_correo_texto)
+        PASS = findViewById<TextInputEditText>(R.id.login_password_texto)
 
         iniciarSesion.setOnClickListener {
-            val intent = Intent(this, InicioActivity::class.java)
-            startActivity(intent)
+            ValidateUser()
+//            val intent = Intent(this, InicioActivity::class.java)
+//            startActivity(intent)
         }
 
         recuperar.setOnClickListener {
             val intent = Intent(this, RecuperarActivity::class.java)
+                .putExtra("email",EMAIL.text.toString())
             startActivity(intent)
         }
 
@@ -30,6 +44,25 @@ class LogInActivity : AppCompatActivity() {
             val intent = Intent(this, RegistrarActivity::class.java)
             startActivity(intent)
 
+        }
+    }
+
+    private fun ValidateUser(){
+        if (!EMAIL.text.isNullOrEmpty() && !PASS.text.isNullOrEmpty()){
+            FirebaseAuth.getInstance().signInWithEmailAndPassword(EMAIL.text.toString(), PASS.text.toString())
+                .addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        bd.collection("users").document(EMAIL.text.toString()).get().addOnSuccessListener {
+                            Toast.makeText(this, "Hola, ${it.get("name").toString()}", Toast.LENGTH_SHORT).show()
+                        }
+                            val intent = Intent(this, InicioActivity::class.java)
+                            startActivity(intent)
+                    } else {
+                        Toast.makeText(this, "correo o contraseña incorrecto", Toast.LENGTH_SHORT).show()
+                    }
+                }
+        }else{
+            Toast.makeText(this, "llena todos los campos", Toast.LENGTH_SHORT).show()
         }
     }
 }

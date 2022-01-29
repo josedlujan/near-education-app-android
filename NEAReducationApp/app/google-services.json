@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "144641791666",
+    "project_id": "near-app-febd4",
+    "storage_bucket": "near-app-febd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144641791666:android:269ec1a4e23b6c779f5bab",
+        "android_client_info": {
+          "package_name": "com.near.educationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144641791666-6rs93icoi5uv29b2k6jsm8566b5mb3ol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.near.educationapp",
+            "certificate_hash": "97550f810436bb6fe851f289468a02db11f1bda6"
+          }
+        },
+        {
+          "client_id": "144641791666-3shpimp74l6vmk5fmaeb4dvjcc9pa1vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA42Dm7IQk6Abr22daohi4nplQRUB8mPCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144641791666-3shpimp74l6vmk5fmaeb4dvjcc9pa1vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
