@@ -52,6 +52,7 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:text="elico1904@gmail.com"
             android:id="@+id/login_correo_texto"
             style="@style/TextInputLayoutAppearance"
             android:layout_width="match_parent"
@@ -79,6 +80,7 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:text="123456q"
             android:id="@+id/login_password_texto"
             style="@style/TextInputLayoutAppearance"
             android:layout_width="match_parent"

@@ -12,7 +12,7 @@
         android:title="@string/menu_navegacion_path"/>
     <item
         android:id="@+id/snippets"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/icon_spinppets"
         android:title="@string/menu_navegacion_snippets"/>
     <item
         android:id="@+id/lecciones"

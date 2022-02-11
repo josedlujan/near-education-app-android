@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_level_cotenedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:src="@drawable/ic_test_morado"
+            android:background="@drawable/background_circle"
+            android:padding="7dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:id="@+id/item_level_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Nivel: 1"
+                android:textSize="20dp"
+                android:maxLength="20"
+                android:textColor="@color/color_pregunta"/>
+            <TextView
+                android:id="@+id/item_level_resumen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Nivel: Basico"
+                android:textSize="15dp"
+                android:maxLength="20"/>
+            <TextView
+
+                android:id="@+id/item_test_puntuacion_cero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0/0"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:id="@+id/item_test_puntuacion_grupo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Puntuación: "
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="correctos:"
+                    android:textColor="@color/color_pregunta"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/item_test_puntuacion_correctos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textColor="@color/color_pregunta"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="errores:"
+                    android:textColor="@color/color_text_error"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/item_test_puntuacion_errores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:textColor="@color/color_text_error"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/icon_arrow"
+            android:layout_marginEnd="10dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

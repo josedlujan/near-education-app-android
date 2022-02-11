@@ -1,60 +1,57 @@
 package com.near.educationapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
+import com.near.educationapp.Adapters.AdapterLecciones
+import com.near.educationapp.Adapters.AdapterLevels
+import com.near.educationapp.Models.ModelLecciones
+import com.near.educationapp.Models.ModelLevels
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [LeccionesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LeccionesFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lecciones, container, false)
-    }
+    lateinit var recycler: RecyclerView
+    private lateinit var adapter: AdapterLecciones
+    private var lista = mutableListOf<ModelLecciones>()
+    private val bd = FirebaseFirestore.getInstance()
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment LeccionesFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance():LeccionesFragment = LeccionesFragment()
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
+        var view:View = inflater.inflate(R.layout.fragment_lecciones, container, false)
 
-           /* LeccionesFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        recycler = view.findViewById(R.id.lecciones_recyclerview)
+        adapter = AdapterLecciones(view.context)
+        recycler.layoutManager = LinearLayoutManager(view.context)
+        recycler.adapter = adapter
+        bd.collection("Lecciones")
+            .get().addOnSuccessListener {
+                for (documentos in it) {
+                    lista.add(ModelLecciones(
+                        documentos.data.get("id").toString(),
+                        documentos.data.get("titulo").toString(),
+                        documentos.data.get("autor").toString(),
+                        documentos.data.get("articulo").toString(),
+                        documentos.data.get("fecha").toString(),
+                        documentos.data.get("foto").toString()))
                 }
-            }*/
+
+                adapter.setListData(lista)
+                adapter.notifyDataSetChanged()
+                lista = adapter.returnListData()
+            }
+
+
+        return view
     }
+
+    companion object { fun newInstance():LeccionesFragment = LeccionesFragment() }
 }

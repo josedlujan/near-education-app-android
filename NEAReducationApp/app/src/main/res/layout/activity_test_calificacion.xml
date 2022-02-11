@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestCalificacionActivity"
+    android:background="@color/fondo">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test1"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puntuación"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/color_respuesta"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:textSize="1dp"
+            android:background="@color/fondo_oscuro_texto"
+            android:layout_marginTop="40dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correctos:"
+                android:textSize="20dp"
+                android:textColor="@color/color_pregunta"/>
+            <TextView
+                android:id="@+id/Test_Calificacion_aciertos"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="20dp"
+                android:layout_marginStart="50dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/color_pregunta"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:textSize="1dp"
+            android:background="@color/fondo_oscuro_texto"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Errores:"
+                android:textSize="20dp"
+                android:textColor="@color/color_text_error"/>
+            <TextView
+                android:id="@+id/Test_Calificacion_errores"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="20dp"
+                android:layout_marginStart="50dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/color_text_error"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:textSize="1dp"
+            android:background="@color/fondo_oscuro_texto"
+            android:layout_marginTop="15dp"/>
+
+
+        <Button
+            android:id="@+id/Test_Calificacion_button"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Guardar Resultado"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

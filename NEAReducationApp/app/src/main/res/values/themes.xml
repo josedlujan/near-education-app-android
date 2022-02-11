@@ -93,4 +93,11 @@
        <item name="android:textSize">16sp</item>
    </style>
 
+
+    <style name="Theme.NEAR_Path" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
 </resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LeccionesActivity"
+    android:orientation="vertical"
+    android:background="@color/fondo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/lecciones_foto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/lecciones_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proof of Stake"
+                android:textColor="@color/color_pregunta"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Por "
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:id="@+id/lecciones_autor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roberto Erick"
+                    android:textColor="@color/color_pregunta"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:id="@+id/lecciones_fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - 02 de diciembre 2021 "
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/lecciones_articulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/test"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="20dp"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

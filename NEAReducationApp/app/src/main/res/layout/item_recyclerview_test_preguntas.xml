@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp">
+        <TextView
+            android:id="@+id/item_preguntas_pregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
+            android:textColor="@color/color_pregunta"
+            android:justificationMode="inter_word"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/item_preguntas_respuesta_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="respuesta 1"/>
+            <RadioButton
+                android:id="@+id/item_preguntas_respuesta_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="respuesta 2"/>
+            <RadioButton
+                android:id="@+id/item_preguntas_respuesta_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="respuesta 3"/>
+            <RadioButton
+                android:id="@+id/item_preguntas_respuesta_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="respuesta 4"/>
+            <RadioButton
+                android:id="@+id/item_preguntas_respuesta_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="respuesta 5"/>
+            <RadioButton
+                android:id="@+id/item_preguntas_aux"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

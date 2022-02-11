@@ -4,22 +4,41 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_near"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_near_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NEAREducationApp">
         <activity
+            android:name=".PathActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NEAR_Path"/>
+        <activity
+            android:name=".LeccionesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SnippetsCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SnippetsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TestCalificacionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PreguntasTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LevesActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecuperarActivity"
             android:exported="false"
-            android:theme="@style/Tema.NoActionBarMorado"
-            />
+            android:theme="@style/Tema.NoActionBarMorado" />
         <activity
             android:name=".RegistrarActivity"
             android:exported="false"
-            android:theme="@style/Tema.NoActionBarMorado"
-
-            />
+            android:theme="@style/Tema.NoActionBarMorado" />
         <activity
             android:name=".LogInActivity"
             android:exported="false"

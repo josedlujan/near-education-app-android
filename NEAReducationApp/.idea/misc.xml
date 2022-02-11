@@ -14,11 +14,48 @@
         <entry key="..\:/Repositorios/AsusWindows/NEAReducationApp/app/src/main/res/layout/fragment_snippets.xml" value="0.3067708333333333" />
         <entry key="..\:/Repositorios/AsusWindows/NEAReducationApp/app/src/main/res/layout/fragment_test.xml" value="0.3067708333333333" />
         <entry key="..\:/Repositorios/AsusWindows/NEAReducationApp/app/src/main/res/menu/menu_navigation.xml" value="0.3067708333333333" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable-xxhdpi/ic_lecciones_morado.xml" value="0.15185185185185185" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/background_circle.xml" value="0.15185185185185185" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/background_circle_lecciones.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/background_circle_path.xml" value="0.20307017543859648" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/background_circle_path_claro.xml" value="0.20307017543859648" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/effect_ripple_back.xml" value="0.15185185185185185" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/ic_baseline_arrow_back.xml" value="0.20307017543859648" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/ic_lecciones.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/ic_path.xml" value="0.20307017543859648" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/ic_path_morado.xml" value="0.20307017543859648" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/ic_test.xml" value="0.15185185185185185" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/ic_test_morado.xml" value="0.15185185185185185" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/icon_arrow.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/drawable/icon_arrow_2.xml" value="0.20307017543859648" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_home.xml" value="0.225" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_lecciones.xml" value="0.2109375" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_leves.xml" value="0.225" />
         <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_log_in.xml" value="0.225" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_path.xml" value="0.22" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_preguntas_test.xml" value="0.225" />
         <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_recuperar.xml" value="0.225" />
         <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_registrar.xml" value="0.225" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_snippets_code.xml" value="0.225" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_snippets_list.xml" value="0.225" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/activity_test_calificacion.xml" value="0.225" />
         <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/fragment_inicio.xml" value="0.22153846153846155" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/fragment_lecciones.xml" value="0.225" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/fragment_path.xml" value="0.18947368421052632" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/fragment_snippets.xml" value="0.22153846153846155" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/fragment_test.xml" value="0.22153846153846155" />
         <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_inicio.xml" value="0.22153846153846155" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_lecciones.xml" value="0.22153846153846155" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_levels.xml" value="0.22153846153846155" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_path.xml" value="0.18701298701298702" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_path_requisitos.xml" value="0.18701298701298702" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_snippets.xml" value="0.22153846153846155" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_snippets_list.xml" value="0.18701298701298702" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_test.xml" value="0.22153846153846155" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_test_levels.xml" value="0.22153846153846155" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/layout/item_recyclerview_test_preguntas.xml" value="0.22153846153846155" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/menu/menu_navigation.xml" value="0.225" />
+        <entry key="..\:/Users/Ballesteros/Desktop/near-education-app-android-main/NEAReducationApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_near.xml" value="0.1" />
       </map>
     </option>
   </component>
