@@ -42,9 +42,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/test"
                     android:textSize="23dp"
-                    android:maxLength="20"/>
+                    />
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"

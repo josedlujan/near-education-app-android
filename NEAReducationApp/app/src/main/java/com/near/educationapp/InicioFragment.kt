@@ -31,7 +31,7 @@ class InicioFragment : Fragment() {
         recycler.layoutManager = LinearLayoutManager(view.context)
         recycler.adapter = adapter
 
-
+        lista.clear()
         bd.collection("news").get().addOnSuccessListener {
             for (documentos in it) {
                 lista.add(

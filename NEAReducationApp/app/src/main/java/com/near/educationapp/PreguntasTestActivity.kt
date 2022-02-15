@@ -54,17 +54,13 @@ class PreguntasTestActivity : AppCompatActivity() {
             var termino:Boolean = true
             for (i in listaRespuestas.indices){
                     if(listaRespuestas[i].equals("null")){
-                        Log.d("Documento","responde la pregunta ${lista[i].num_pregunta}")
-                        Toast.makeText(this, "responde la pregunta ${lista[i].num_pregunta}", Toast.LENGTH_SHORT).show()
                         termino = false
                         break
                     }else{
                         if (listaRespuestas[i].equals(lista[i].respuesta_correcta)){
-                            Log.d("Documento","true --> ${listaRespuestas[i]}")
                             aciertos++
                         }else{
                             errores++
-                            Log.d("Documento","false --> ${listaRespuestas[i]}")
                         }
                     }
             }

@@ -21,6 +21,7 @@
     <color name="color_pregunta">#6200ee</color>
     <color name="color_texto_default">#757575</color>
     <color name="circle_lecciones">#c9d5ff</color>
+    <color name="ShadowBack">#BC232323</color>
 
     <color name="color_easy">#aad055</color>
     <color name="color_medium">#e3935b</color>

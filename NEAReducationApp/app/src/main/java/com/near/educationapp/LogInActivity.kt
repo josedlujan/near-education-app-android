@@ -54,6 +54,7 @@ class LogInActivity : AppCompatActivity() {
                             SavePreferences(EMAIL.text.toString())
                             val intent = Intent(this, InicioActivity::class.java)
                             startActivity(intent)
+                            finish()
                     } else {
                         Toast.makeText(this, "correo o contraseña incorrecto", Toast.LENGTH_SHORT).show()
                     }
@@ -64,10 +65,11 @@ class LogInActivity : AppCompatActivity() {
     }
 
 
-
     private fun SavePreferences(email:String){
         val prefs =getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
         prefs.putString("email", email)
         prefs.apply()
     }
+
+    override fun onBackPressed() {}
 }

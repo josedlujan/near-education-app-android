@@ -30,6 +30,7 @@ class PathFragment : Fragment() {
         recycler.layoutManager = LinearLayoutManager(view.context)
         recycler.adapter = adapter
 
+        lista.clear()
         bd.collection("pathCategorias")
             .get().addOnSuccessListener {
                 for (documentos in it) {

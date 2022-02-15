@@ -25,7 +25,6 @@
                 android:id="@+id/item_test_photo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@color/purple_500"
                 android:scaleType="fitXY" />
 
             <LinearLayout

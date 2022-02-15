@@ -8,7 +8,6 @@
         android:id="@+id/item_path_requisito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="• Esto es una prueba"
         android:background="@drawable/background_circle_path_claro"
         android:textSize="16dp"
         android:paddingStart="10dp"

@@ -19,7 +19,7 @@
         android:icon="@drawable/ic_lecciones"
         android:title="@string/menu_navegacion_lecciones"/>
     <item
-        android:id="@+id/test"
-        android:icon="@drawable/ic_test"
-        android:title="@string/menu_navegacion_test"/>
+        android:id="@+id/more"
+        android:icon="@drawable/ic_baseline_more"
+        android:title="@string/menu_navegacion_more"/>
 </menu>

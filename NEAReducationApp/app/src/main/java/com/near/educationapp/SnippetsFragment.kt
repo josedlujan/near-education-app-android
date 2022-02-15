@@ -30,6 +30,7 @@ class SnippetsFragment : Fragment() {
         recycler.layoutManager = LinearLayoutManager(view.context)
         recycler.adapter = adapter
 
+        lista.clear()
         bd.collection("SnippetsCategorias").orderBy("name")
             .get().addOnSuccessListener {
             for (documentos in it) {

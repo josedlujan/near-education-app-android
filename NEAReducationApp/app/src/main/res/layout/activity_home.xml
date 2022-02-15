@@ -6,25 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".InicioActivity">
 
-    <FrameLayout
-        android:id="@+id/contenedor"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/contenedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
             android:background="@color/purple_500"
             app:itemIconTint="@color/blanco"
             app:itemTextColor="@color/blanco"
-            app:menu="@menu/menu_navigation"
-            />
+            app:menu="@menu/menu_navigation" />
+    </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/Home_fondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ShadowBack"
+        android:clickable="true"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/Home_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Seguro que deseas cerrar sesión?"
+                    android:textAlignment="center"
+                    android:textSize="23dp"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="20sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Home_button_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/effect_radius"
+                        android:clickable="true"
+                        android:foreground="@drawable/effect_ripple_white"
+                        android:padding="5dp"
+                        android:text="Cancelar"
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco"
+                        android:textSize="18dp" />
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="20sp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/Home_button_ok"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/effect_radius"
+                        android:clickable="true"
+                        android:foreground="@drawable/effect_ripple_white"
+                        android:padding="5dp"
+                        android:text="Salir"
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

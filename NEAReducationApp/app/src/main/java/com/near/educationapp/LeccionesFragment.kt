@@ -32,6 +32,7 @@ class LeccionesFragment : Fragment() {
         adapter = AdapterLecciones(view.context)
         recycler.layoutManager = LinearLayoutManager(view.context)
         recycler.adapter = adapter
+        lista.clear()
         bd.collection("Lecciones")
             .get().addOnSuccessListener {
                 for (documentos in it) {

@@ -26,6 +26,7 @@ class TestFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         var view: View = inflater.inflate(R.layout.fragment_test, container, false)
 
+        lista.clear()
         recycler = view.findViewById(R.id.test_recyclerview)
         adapter = AdapterTestTitle(view.context)
         recycler.layoutManager = LinearLayoutManager(view.context)

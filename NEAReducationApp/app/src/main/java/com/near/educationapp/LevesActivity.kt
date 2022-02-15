@@ -26,8 +26,6 @@ class LevesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leves)
 
-        Log.d("Documento","onCreate")
-
         val bundle = intent.extras
         ID_TEST = bundle?.getString("id").toString()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
