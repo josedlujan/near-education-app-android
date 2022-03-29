@@ -9,7 +9,6 @@
     >
 
 <androidx.constraintlayout.widget.ConstraintLayout
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_500"
@@ -37,9 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nearlogo"
-        android:textSize="20sp"
-
-        />
+        android:textSize="20sp"/>
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -47,7 +44,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_500_texto"
-
         android:layout_marginTop="216dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
@@ -60,8 +56,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/recuperar_correo"
-            android:textColorHint="@color/blanco"
-            />
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColorHint="@color/blanco"/>
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -70,15 +69,14 @@
         android:id="@+id/recuperar_boton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="80dp"
         android:text="@string/recuperar_boton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recuperar"
         android:background="@color/fondo"
-        android:textColor="@color/purple_500"
-        />
+        android:textColor="@color/purple_500"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

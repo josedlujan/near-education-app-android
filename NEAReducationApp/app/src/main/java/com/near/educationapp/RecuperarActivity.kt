@@ -25,9 +25,10 @@ class RecuperarActivity : AppCompatActivity() {
 
 
         ButtonRecuperar.setOnClickListener {
-            if (!EMAIL.text.isNullOrEmpty()){
+            var correo = EMAIL.text.toString().replace(" ","")
+            if (!correo.isNullOrEmpty()){
                 auth.setLanguageCode("es")
-                auth.sendPasswordResetEmail(EMAIL.text.toString()).addOnCompleteListener { task ->
+                auth.sendPasswordResetEmail(correo).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "hemos mandado un correo de recuperacion", Toast.LENGTH_LONG).show()
                         finish()

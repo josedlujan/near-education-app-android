@@ -2,67 +2,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5">
 
     <androidx.cardview.widget.CardView
+        android:backgroundTint="@color/blanco"
         android:id="@+id/item_news_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="6dp"
+        android:layout_margin="10dp"
         android:clickable="true"
         android:foreground="?selectableItemBackground"
-        app:cardCornerRadius="20dp">
+        app:cardCornerRadius="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp">
-
-                <ImageView
-                    android:id="@+id/item_news_photo"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:scaleType="fitXY" />
-
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/item_news_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="10dp"
                 android:orientation="vertical">
 
                 <TextView
+                    android:textColor="@color/color_texto_default"
                     android:id="@+id/item_news_date"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:textAlignment="textEnd"/>
-                <TextView
-                    android:id="@+id/item_news_title"
-                    android:layout_marginTop="3dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
-                    android:textSize="13dp"/>
-
-                <TextView
-                    android:id="@+id/item_news_resumen"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
-                    android:justificationMode="inter_word"/>
+                    android:text="@string/test1"
+                    android:textAlignment="textEnd"
+                    android:fontFamily="sans-serif-medium"/>
+                <TextView
+                    android:id="@+id/item_news_title"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="14dp"
+                    android:text="@string/test1"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_pregunta"/>
+
+                <TextView
+                    android:textColor="@color/color_texto_default"
+                    android:id="@+id/item_news_resumen"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:justificationMode="inter_word"
+                    android:text="@string/test"/>
 
 
             </LinearLayout>

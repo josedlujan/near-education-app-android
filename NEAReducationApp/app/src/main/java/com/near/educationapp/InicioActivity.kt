@@ -2,6 +2,7 @@ package com.near.educationapp
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,7 +24,7 @@ class InicioActivity : AppCompatActivity() {
     val leccionesFragment = LeccionesFragment.newInstance()
     val testFragment = TestFragment.newInstance()
     val moreFragment = MoreFragment.newInstance()
-    var position:Int = 1
+    var position:Int = 0
 
     private lateinit var fondo:RelativeLayout
     private lateinit var message:RelativeLayout
@@ -42,6 +43,7 @@ class InicioActivity : AppCompatActivity() {
         button_ok = findViewById(R.id.Home_button_ok)
 
         button_cancel.setOnClickListener {
+            position = 5
             HideMessageExit()
         }
         button_ok.setOnClickListener {
@@ -79,7 +81,7 @@ class InicioActivity : AppCompatActivity() {
                     return@setOnItemSelectedListener true
                 }
                 R.id.more->{
-                    toolbar.title = "More"
+                    toolbar.title = "más"
                     changeFragment(moreFragment)
                     position = 5
                     return@setOnItemSelectedListener true
@@ -90,8 +92,18 @@ class InicioActivity : AppCompatActivity() {
             false
         }
 
-        toolbar.title = "Inicio"
         changeFragment(inicioFragment)
+
+        when(savedInstanceState?.getInt("position")){
+            1->{toolbar.title = "Inicio"}
+            2->{toolbar.title = "Path"}
+            3->{toolbar.title = "Snippets"}
+            4->{toolbar.title = "Lecciones"}
+            5->{toolbar.title = "más"}
+            6->{toolbar.title = "Quiz"}
+            7->{toolbar.title = "más"}
+        }
+
 
     }
 
@@ -102,10 +114,11 @@ class InicioActivity : AppCompatActivity() {
     }
 
     fun ShowTest(){
-        toolbar.title = "Test"
+        toolbar.title = "Quiz"
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.contenedor,testFragment)
         transaction.commit()
+        position = 6
     }
 
     override fun onBackPressed() {
@@ -113,7 +126,7 @@ class InicioActivity : AppCompatActivity() {
             if (fondo.visibility == View.VISIBLE){
                 HideMessageExit()
             }else{
-                toolbar.title = "More"
+                toolbar.title = "más"
                 changeFragment(moreFragment)
             }
         }
@@ -132,6 +145,7 @@ class InicioActivity : AppCompatActivity() {
     }
 
     fun ShowMessageExit(){
+        position = 7
         fondo.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in))
         fondo.visibility = View.VISIBLE
 
@@ -148,6 +162,39 @@ class InicioActivity : AppCompatActivity() {
         message.visibility = View.GONE
     }
 
+    fun isUsingNightModeResources(): Boolean {
+        return when (resources.configuration.uiMode and
+                Configuration.UI_MODE_NIGHT_MASK) {
+            Configuration.UI_MODE_NIGHT_YES -> true
+            Configuration.UI_MODE_NIGHT_NO -> false
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> false
+            else -> false
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("position",position)
+    }
+
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        when(savedInstanceState.getInt("position")){
+            1 -> {changeFragment(inicioFragment) }
+            2 -> {changeFragment(pathFragment)}
+            3 -> {changeFragment(snippetsFragment)}
+            4 -> {changeFragment(leccionesFragment)}
+            5 -> {changeFragment(moreFragment)}
+            6 -> {changeFragment(testFragment)}
+            7 -> {
+                changeFragment(moreFragment)
+                ShowMessageExit()
+            }
+
+        }
+        position = savedInstanceState.getInt("position")
+    }
 
 
 }

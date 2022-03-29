@@ -8,12 +8,14 @@
         android:id="@+id/item_path_requisito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_circle_path_claro"
-        android:textSize="16dp"
-        android:paddingStart="10dp"
-        android:layout_marginEnd="20dp"
-        android:paddingEnd="20dp"
-        android:fontFamily="sans-serif-medium"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_circle_path_claro"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="15dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:textSize="16dp" />
 </LinearLayout>

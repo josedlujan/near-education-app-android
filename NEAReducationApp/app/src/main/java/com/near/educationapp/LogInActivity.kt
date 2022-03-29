@@ -47,11 +47,14 @@ class LogInActivity : AppCompatActivity() {
     }
 
     private fun ValidateUser(){
-        if (!EMAIL.text.isNullOrEmpty() && !PASS.text.isNullOrEmpty()){
-            FirebaseAuth.getInstance().signInWithEmailAndPassword(EMAIL.text.toString(), PASS.text.toString())
+        var correo = EMAIL.text.toString().replace(" ","")
+        var contraseña = PASS.text.toString().replace(" ","")
+
+        if (!correo.isNullOrEmpty() && !contraseña.isNullOrEmpty()){
+            FirebaseAuth.getInstance().signInWithEmailAndPassword(correo, contraseña)
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-                            SavePreferences(EMAIL.text.toString())
+                            SavePreferences(correo)
                             val intent = Intent(this, InicioActivity::class.java)
                             startActivity(intent)
                             finish()

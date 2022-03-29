@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.near.educationapp.InicioActivity
 import com.near.educationapp.Models.ModelPath
 import com.near.educationapp.PathActivity
 import com.near.educationapp.R
@@ -55,21 +56,57 @@ class AdapterPath(private val context: Context):RecyclerView.Adapter<AdapterPath
 
             nombre.text = Objeto.nombre
 
-            if (Objeto.activo){
-                nombre.setTextColor(ContextCompat.getColor(context,R.color.color_pregunta))
-                activo.visibility = View.GONE
-                icon.setImageResource(R.drawable.icon_arrow)
-                card.setOnClickListener {
 
-                context.startActivity(Intent(context, PathActivity::class.java)
-                    .putExtra("id_categoria","${Objeto.id}")
-                    .putExtra("nombre","${Objeto.nombre}"))
 
+
+
+
+
+            if (context is InicioActivity){
+                if (context.isUsingNightModeResources()){
+                    if (Objeto.activo){
+                        nombre.setTextColor(ContextCompat.getColor(context,
+                            R.color.fondo
+                        ))
+                        activo.visibility = View.GONE
+                        icon.setImageResource(R.drawable.icon_arrow)
+                        card.setOnClickListener {
+
+                            context.startActivity(Intent(context, PathActivity::class.java)
+                                .putExtra("id_categoria","${Objeto.id}")
+                                .putExtra("nombre","${Objeto.nombre}"))
+
+                        }
+                    }else{
+
+                        nombre.setTextColor(ContextCompat.getColor(context, R.color.fondo))
+                        icon.setImageResource(R.drawable.icon_arrow_2)
+                    }
+                }else{
+                    if (Objeto.activo){
+                        nombre.setTextColor(ContextCompat.getColor(context,R.color.color_pregunta))
+                        activo.visibility = View.GONE
+                        icon.setImageResource(R.drawable.icon_arrow)
+                        card.setOnClickListener {
+
+                            context.startActivity(Intent(context, PathActivity::class.java)
+                                .putExtra("id_categoria","${Objeto.id}")
+                                .putExtra("nombre","${Objeto.nombre}"))
+
+                        }
+                    }else{
+
+                        nombre.setTextColor(ContextCompat.getColor(context, R.color.color_texto_default))
+                        icon.setImageResource(R.drawable.icon_arrow_2)
+                    }
                 }
-            }else{
-                nombre.setTextColor(ContextCompat.getColor(context, R.color.color_texto_default))
-                icon.setImageResource(R.drawable.icon_arrow_2)
             }
+
+
+
+
+
+
         }
 
     }

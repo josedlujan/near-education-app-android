@@ -17,9 +17,10 @@
     <color name="oscuro_texto">#5e5e5e</color>
     <color name="color_text_error">#FF0000</color>
 
+
     <color name="color_respuesta">#8968bf</color>
     <color name="color_pregunta">#6200ee</color>
-    <color name="color_texto_default">#757575</color>
+    <color name="color_texto_default">#8C000000</color>
     <color name="circle_lecciones">#c9d5ff</color>
     <color name="ShadowBack">#BC232323</color>
 

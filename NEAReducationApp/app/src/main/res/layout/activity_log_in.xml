@@ -1,5 +1,4 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,8 +16,7 @@
             android:layout_height="match_parent"
             android:background="@color/fondo"
             android:padding="20dp"
-            tools:context=".LogInActivity"
-            >
+            tools:context=".LogInActivity">
 
 
             <ImageView
@@ -56,13 +54,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/login_msg">
 
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/login_correo_texto"
                     style="@style/TextInputLayoutAppearance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/login_correo"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:singleLine="true"
                     android:textColor="@color/fondo_oscuro_texto"
                     android:textColorHighlight="@color/purple_500"
                     android:textSize="@dimen/text_size_m" />
@@ -91,6 +91,8 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/login_password"
                     android:inputType="textPassword"
+                    android:lines="1"
+                    android:singleLine="true"
                     android:textColor="@color/fondo_oscuro_texto"
                     android:textColorHighlight="@color/purple_500"
                     android:textSize="@dimen/text_size_m" />
@@ -100,7 +102,7 @@
                 android:id="@+id/iniciar_sesion"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="40dp"
                 android:background="@color/purple_500"
                 android:elevation="16dp"
                 android:text="@string/login_boton"
@@ -143,7 +145,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
 
 
 </LinearLayout>

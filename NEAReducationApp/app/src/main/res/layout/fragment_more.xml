@@ -11,16 +11,17 @@
         android:id="@+id/more_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:clickable="true"
         android:foreground="?selectableItemBackground"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
         <ImageView
+            android:layout_marginStart="10dp"
             android:layout_width="43dp"
             android:layout_height="43dp"
             android:background="@drawable/background_circle"
@@ -30,18 +31,19 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="sans-serif-medium"
             android:maxLength="20"
-            android:text="Test"
+            android:text="Quiz"
             android:textColor="@color/color_pregunta"
             android:textSize="20dp" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="30dp"
             android:background="@drawable/icon_arrow" />
 
     </LinearLayout>
@@ -50,16 +52,17 @@
         android:id="@+id/more_logOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:clickable="true"
         android:foreground="?selectableItemBackground"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
         <ImageView
+            android:layout_marginStart="10dp"
             android:layout_width="43dp"
             android:layout_height="43dp"
             android:background="@drawable/background_circle"
@@ -69,18 +72,19 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="sans-serif-medium"
             android:maxLength="20"
             android:text="Cerrar sesión"
             android:textColor="@color/color_pregunta"
             android:textSize="20dp" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="30dp"
             android:background="@drawable/icon_arrow" />
 
     </LinearLayout>

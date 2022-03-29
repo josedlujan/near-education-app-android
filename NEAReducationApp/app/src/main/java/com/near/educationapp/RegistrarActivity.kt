@@ -2,9 +2,7 @@ package com.near.educationapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
@@ -36,10 +34,11 @@ class RegistrarActivity : AppCompatActivity() {
 
 
     private fun ValidateData() {
-        if (!EMAIL.text.isNullOrEmpty()){
-            bd.collection("users").document(EMAIL.text.toString()).get().addOnSuccessListener {
+        var correo = EMAIL.text.toString().replace(" ","")
+        if (!correo.isNullOrEmpty()){
+            bd.collection("users").document(correo).get().addOnSuccessListener {
                 if (it.get("email").toString().equals("null")){
-                    RegisterUser()
+                    RegisterUser(correo)
                 }else{
                     Toast.makeText(this, "el correo ya esta ocupado", Toast.LENGTH_SHORT).show()
                 }
@@ -50,16 +49,19 @@ class RegistrarActivity : AppCompatActivity() {
     }
 
 
-    private fun RegisterUser(){
-        if (PASS.text.isNullOrEmpty() || NAME.text.isNullOrEmpty()){
+    private fun RegisterUser(correo: String) {
+        var nombre = NAME.text.toString().replace(" ","")
+        var contraseña = PASS.text.toString().replace(" ","")
+
+        if (contraseña.isNullOrEmpty() || nombre.isNullOrEmpty()){
             Toast.makeText(this, "llena todos los campos", Toast.LENGTH_SHORT).show()
         }else{
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(EMAIL.text.toString(),PASS.text.toString()).addOnCompleteListener{
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(correo,contraseña).addOnCompleteListener{
                 if (it.isSuccessful) {
-                    bd.collection("users").document(EMAIL.text.toString()).set(
+                    bd.collection("users").document(correo).set(
                         hashMapOf(
-                            "email" to EMAIL.text.toString(),
-                            "name" to NAME.text.toString()))
+                            "email" to correo,
+                            "name" to nombre))
                     Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show()
                     finish()
                 }else{

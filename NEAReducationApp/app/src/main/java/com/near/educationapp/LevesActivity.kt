@@ -66,7 +66,7 @@ class LevesActivity : AppCompatActivity() {
                     lista.add(ModelLevels(
                         documentos.data.get("id").toString(),
                         documentos.data.get("id_categoria").toString(),
-                        documentos.data.get("nivel_number").toString(),
+                        documentos.data.get("nivel_number").toString().toInt(),
                         documentos.data.get("nivel_texto").toString()))
 
                 }

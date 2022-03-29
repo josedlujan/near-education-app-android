@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SnippetsCodeActivity"
-    android:background="@color/fondo">
+    android:background="@color/blanco">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,20 +16,20 @@
             android:id="@+id/SnippetsCode_titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/color_pregunta"
-            android:justificationMode="inter_word"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:clickable="true"/>
+            android:fontFamily="sans-serif-medium"
+            android:justificationMode="inter_word"
+            android:text="@string/test1"
+            android:textColor="@color/color_pregunta"
+            android:textSize="25dp"
+            android:textAlignment="center"/>
 
         <thereisnospon.codeview.CodeView
             android:id="@+id/codeview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </thereisnospon.codeview.CodeView>
+            android:layout_height="wrap_content"></thereisnospon.codeview.CodeView>
 
     </LinearLayout>
 

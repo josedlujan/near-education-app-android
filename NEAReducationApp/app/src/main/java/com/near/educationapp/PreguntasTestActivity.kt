@@ -45,6 +45,11 @@ class PreguntasTestActivity : AppCompatActivity() {
         id_nivel = bundle?.getString("id_nivel").toString()
         nivel_number = bundle?.getString("nivel").toString()
 
+        recycler = findViewById(R.id.TestPreguntas_recyclerview)
+        adapter = AdapterTestPreguntas(this)
+        recycler.layoutManager = LinearLayoutManager(this)
+        recycler.adapter = adapter
+
         var button = findViewById<Button>(R.id.button_test)
         button.setOnClickListener {
 
@@ -55,6 +60,8 @@ class PreguntasTestActivity : AppCompatActivity() {
             for (i in listaRespuestas.indices){
                     if(listaRespuestas[i].equals("null")){
                         termino = false
+                        recycler.scrollToPosition(i)
+                        Toast.makeText(this, "Contesta la pregunta ${i+1}", Toast.LENGTH_SHORT).show()
                         break
                     }else{
                         if (listaRespuestas[i].equals(lista[i].respuesta_correcta)){
@@ -76,10 +83,6 @@ class PreguntasTestActivity : AppCompatActivity() {
             }
 
         }
-        recycler = findViewById(R.id.TestPreguntas_recyclerview)
-        adapter = AdapterTestPreguntas(this)
-        recycler.layoutManager = LinearLayoutManager(this)
-        recycler.adapter = adapter
 
         bd.collection("TestPreguntas")
             .whereEqualTo("id_categoria","${id_categoria}")

@@ -21,10 +21,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="sans-serif-medium"
                 android:text="@string/test1"
                 android:textAlignment="center"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/color_texto_default"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -123,16 +124,16 @@
             <Button
                 android:id="@+id/Test_Calificacion_button"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="30dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
                 android:background="@color/purple_500"
                 android:elevation="16dp"
                 android:text="Guardar Resultado"
                 android:textColor="@color/blanco"
-                android:textSize="@dimen/text_size_m" />
+                android:textSize="18dp" />
 
         </LinearLayout>
 

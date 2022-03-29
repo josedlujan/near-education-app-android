@@ -8,53 +8,56 @@
         android:id="@+id/item_path_list_cotenedor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:clickable="true"
         android:foreground="?selectableItemBackground"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
         <ImageView
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:src="@drawable/ic_path_morado"
+            android:layout_marginStart="20dp"
             android:background="@drawable/background_circle"
-            android:padding="7dp"/>
+            android:padding="7dp"
+            android:src="@drawable/ic_path_morado" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/item_path_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="NEAR Certified Developer"
-                android:textSize="20dp"
+                android:textSize="18dp" />
 
-                android:layout_marginStart="20dp"/>
             <TextView
                 android:id="@+id/item_path_activo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="pronto"
-                android:textSize="15dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="3dp"
+                android:text="pronto"
                 android:textColor="@color/color_pregunta"
-                android:layout_marginStart="20dp"/>
+                android:textSize="15dp" />
         </LinearLayout>
 
         <ImageView
             android:id="@+id/item_path_icon"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:layout_marginStart="5dp"
-            android:layout_marginEnd="20dp"/>
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/icon_arrow" />
 
     </LinearLayout>
 
